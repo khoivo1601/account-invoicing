@@ -12,5 +12,10 @@
     "application": False,
     "installable": True,
     "depends": ["account", "base_tier_validation"],
-    "data": ["views/account_move_view.xml"],
+    "data": [
+        "data/mail_template_data.xml",
+        "security/ir.model.access.csv",
+        "views/account_move_view.xml",
+        "wizard/account_invoice_validation_send.xml",
+    ],
 }

@@ -80,6 +80,15 @@
                     attrs="{'invisible':[('review_ids', '=', [])]}"
                 />
             </xpath>
+            <xpath expr="//group[@id='other_tab_group']" position="inside">
+                <group
+                    string="Validation"
+                    name="tier_validation"
+                    attrs="{'invisible': [('move_type', 'not in', ('in_invoice', 'in_refund'))]}"
+                >
+                <field name="user_validation_responsible_id" />
+                </group>
+            </xpath>
         </field>
     </record>
     <record id="view_account_invoice_filter" model="ir.ui.view">
